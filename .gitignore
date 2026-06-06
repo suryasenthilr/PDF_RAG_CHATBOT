@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables (Secrets)
+.env
+
+# Databases / Vector Stores
+chroma_db/
+chroma_db_ui/
+chroma-db/
+
+# Python Cache and Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Large PDF files (databases should be built locally)
+documentloaders/*.pdf
