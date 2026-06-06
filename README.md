@@ -1,22 +1,22 @@
-# 📚 RAG Book Assistant
+# RAG Book Assistant
 
-A modern, powerful **Retrieval-Augmented Generation (RAG)** application designed to help you interactively search, analyze, and query PDF books, academic papers, and documents. Built using **LangChain**, **Google Gemini 2.5 Flash**, **Cohere Embeddings**, and **Chroma DB**.
+A Retrieval-Augmented Generation (RAG) application designed to help you interactively search, analyze, and query PDF books, academic papers, and documents. Built using LangChain, Google Gemini 2.5 Flash, Cohere Embeddings, and Chroma DB.
 
-The project features both a terminal-based conversational interface and a beautiful interactive **Streamlit Web Application**.
+The project features both a terminal-based conversational interface and an interactive Streamlit Web Application.
 
 ---
 
-## 🌟 Features
+## Features
 
 - **Interactive Streamlit Web UI**: Easy PDF document uploader, automated vector database ingestion, and real-time chat.
 - **Fast CLI Interface**: Console-based chat loop with full chat history preservation for quick local query testing.
-- **Advanced Retrieval**: Employs **Maximal Marginal Relevance (MMR)** search to balance relevance and diversity of retrieved document sections.
-- **Context-Bound Answering**: Strict system prompting prevents hallucination, instructing the assistant to answer questions *only* if the answer is present in the context of the document.
+- **Advanced Retrieval**: Employs Maximal Marginal Relevance (MMR) search to balance relevance and diversity of retrieved document sections.
+- **Context-Bound Answering**: Strict system prompting prevents hallucination, instructing the assistant to answer questions only if the answer is present in the context of the document.
 - **Multi-Query Expansion**: Multi-query retrieval demonstration to rewrite user questions from different perspectives for more robust document retrieval.
 
 ---
 
-## 🏗️ Architecture Workflow
+## Architecture Workflow
 
 ```mermaid
 flowchart TD
@@ -41,21 +41,21 @@ flowchart TD
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📋 Prerequisites
+### Prerequisites
 
 Ensure you have the following installed on your local machine:
-- **Python 3.9 - 3.11**
-- **Git**
+- Python 3.9 - 3.11
+- Git
 - API Keys for:
-  - **Google Gemini** (for the LLM)
-  - **Cohere** (for high-quality English embeddings)
-  - **Mistral AI** (optional, for CLI testing scripts)
+  - Google Gemini (for the LLM)
+  - Cohere (for high-quality English embeddings)
+  - Mistral AI (optional, for CLI testing scripts)
 
 ---
 
-### ⚙️ Installation & Setup
+### Installation & Setup
 
 1. **Clone the repository:**
    ```bash
@@ -90,7 +90,7 @@ Ensure you have the following installed on your local machine:
 
 ---
 
-## 🖥️ How to Run
+## How to Run
 
 ### Option 1: Streamlit Web UI (Recommended)
 Launch the interactive web application to upload files and chat using a browser dashboard:
@@ -117,7 +117,7 @@ If you already have a PDF processed or want to query the database from your term
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── chroma_db/               # Local persistence directory for Chroma vector store (gitignored)
@@ -136,7 +136,7 @@ If you already have a PDF processed or want to query the database from your term
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - **[LangChain](https://github.com/langchain-ai/langchain)** - Core LLM application orchestration framework.
 - **[Streamlit](https://streamlit.io/)** - Rapid GUI development for machine learning applications.
@@ -146,7 +146,7 @@ If you already have a PDF processed or want to query the database from your term
 
 ---
 
-## 🔒 Security Warning
+## Security Warning
 
 > [!WARNING]
 > Do not commit or push the `.env` file containing your API keys to public repositories. This repository is pre-configured with a `.gitignore` to prevent secret leaks.
