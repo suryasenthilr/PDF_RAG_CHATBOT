@@ -1,6 +1,6 @@
 # RAG Book Assistant
 
-A Retrieval-Augmented Generation (RAG) application designed to help you interactively search, analyze, and query PDF books, academic papers, and documents. Built using LangChain, Google Gemini 2.5 Flash, Cohere Embeddings, and Chroma DB.
+A Retrieval-Augmented Generation (RAG) application designed to help you interactively search, analyze, and query PDF books, academic papers, and documents. Built using LangChain, Google chat models, Cohere embeddings, and Chroma DB.
 
 The project features both a terminal-based conversational interface and an interactive Streamlit Web Application.
 
@@ -24,7 +24,7 @@ flowchart TD
         PDF[PDF Document] --> Loader[PyPDF Loader]
         Loader --> Splitter[Recursive Character Text Splitter]
         Splitter --> Chunks[Text Chunks]
-        Chunks --> Embedder[Cohere Embeddings v3.0]
+        Chunks --> Embedder[Cohere Embeddings]
         Embedder --> VectorStore[(Chroma DB Vector Store)]
     end
 
@@ -34,7 +34,7 @@ flowchart TD
         Retriever --> Context[Relevant Context Documents]
         Context --> Prompt[Context + Chat History Prompt]
         UserQuery --> Prompt
-        Prompt --> LLM[Google Gemini 2.5 Flash]
+        Prompt --> LLM[Google Chat Model]
         LLM --> Response[Response & Follow-up Chat History]
     end
 ```
@@ -49,8 +49,8 @@ Ensure you have the following installed on your local machine:
 - Python 3.9 - 3.11
 - Git
 - API Keys for:
-  - Google Gemini (for the LLM)
-  - Cohere (for high-quality English embeddings)
+  - Google Generative AI (for the chat model)
+  - Cohere (for embeddings)
   - Mistral AI (optional, for CLI testing scripts)
 
 ---
@@ -83,7 +83,7 @@ Ensure you have the following installed on your local machine:
 4. **Configure Environment Variables:**
    Create a file named `.env` in the root directory and add your API keys:
    ```env
-   GOOGLE_API_KEY="your-google-gemini-api-key"
+   GOOGLE_API_KEY="your-google-api-key"
    COHERE_API_KEY="your-cohere-api-key"
    MISTRAL_API_KEY="your-mistral-api-key"
    ```
@@ -141,8 +141,8 @@ If you already have a PDF processed or want to query the database from your term
 - **[LangChain](https://github.com/langchain-ai/langchain)** - Core LLM application orchestration framework.
 - **[Streamlit](https://streamlit.io/)** - Rapid GUI development for machine learning applications.
 - **[Chroma DB](https://www.trychroma.com/)** - Open-source vector database for AI.
-- **[Cohere Embeddings](https://cohere.com/embeddings)** - Contextual text representations.
-- **[Google Gemini 2.5 Flash](https://ai.google.dev/models/gemini)** - Multimodal model for fast, accurate generation.
+- **[Cohere](https://cohere.com/)** - Embeddings for contextual text representation.
+- **[Google Chat Model](https://ai.google.dev/)** - LLM for response generation.
 
 ---
 
